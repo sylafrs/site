@@ -1,5 +1,14 @@
 <?php
 
+function show_github_displayed_file_name($path_to_file, $displayed_file_name)
+{	
+	echo "<div class=\"nom-fichier\">";
+		echo "<a href=\"https://github.com/sylafrs/site/blob/master/$path_to_file/$displayed_file_name\">";
+			echo "<span class=\"glyphicon glyphicon-cloud\"></span> $path_to_file/$displayed_file_name";
+		echo "</a>";
+	echo "</div>";
+}
+
 /**
  * 	Starts an article.
  * 	@param title
@@ -16,10 +25,15 @@ function start_article($title, $date, $category, $displayed_file_name)
 	$date = get_fr_date($date);
 
 	echo "<div class=\"article\">";
-	echo "<h2>$title</h2>";
-	echo "<h3>Le $date</h3>";
-	echo "<h4>$category</h4>";
-	echo "<span class=\"nom-fichier\">articles/$displayed_file_name</span>";
+	echo "<div class=\"container\">";
+
+	echo "<div class=\"row\">";
+		echo "<h2>$title</h2>";
+		echo "<h3>Le $date <span class=\"label label-default\">$category</span></h3>";
+		show_github_displayed_file_name("articles", $displayed_file_name);
+	echo "</div>";	
+
+	echo "<br/>";
 }
 
 /**
@@ -27,6 +41,7 @@ function start_article($title, $date, $category, $displayed_file_name)
  */
 function stop_article()
 {
+	echo "</div>";	
 	echo "</div>";
 }
 
@@ -35,7 +50,8 @@ function stop_article()
  */
 function start_article_paragraph() 
 {
-	echo "<p>";
+	echo "<div class=\"row\">";
+	echo "<p class=\"text-justify\">";
 }
 
 /**
@@ -53,20 +69,29 @@ function next_article_paragraph()
 function stop_article_paragraph()
 {
 	echo "</p>";
+	echo "</div>";
 }
 
 /**
  * Displays an image within an article. Must not be called in paragraphs.
- * @param path_to_file
+ * @param file_name
  *		Path to the image file
  * @param displayed_file_name
  *		The image displayed file name
  */
-function show_article_image($path_to_file, $displayed_file_name)
-{
-	echo "<div class=\"image\">";
-	echo "<img src=\"images/articles/$path_to_file\" />";
-	echo "<div class=\"nom-fichier\">images/articles/$displayed_file_name</div>";
+function show_article_image($file_name, $displayed_file_name)
+{	
+	$path_to_file = "images/articles";
+
+	echo "<div class=\"row\">";
+		echo "<div class=\"col-lg-4 col-lg-offset-4\">";
+			echo "<div class=\"thumbnail\">";
+				echo "<img src=\"$path_to_file/$file_name\"/>";
+				echo "<div class=\"caption\">";
+					show_github_displayed_file_name($path_to_file, $displayed_file_name);
+				echo "</div>";
+			echo "</div>";
+		echo "</div>";
 	echo "</div>";
 }
 

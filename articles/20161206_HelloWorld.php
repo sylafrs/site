@@ -1,11 +1,11 @@
-<?php start_article("Création du site web", "2016/12/06", "site web", "20161206_Helloworld.php"); ?>
+<?php start_article("Création du site web", "2016/12/06", "site web", "20161206_HelloWorld.php"); ?>
 <?php start_article_paragraph(); ?>
 Bonjour, bonjour !
 <?php next_article_paragraph(); ?>
 Et voici le premier article !<br/>
 Tout juste après l'achat du domaine et l'activation de l'hébergement gratuit d'ovh (start100m), il me fallait absolument faire mon premier article, malgré l'absence manifeste de quelque décor que ce soit.
 <?php stop_article_paragraph(); ?>
-<?php show_article_image("20161206_screenshot_half.jpg", "20161206_HelloWorld.php"); ?>
+<?php show_article_image("20161206_screenshot_half.jpg", "20161206_screenshot.jpg"); ?>
 <?php start_article_paragraph(); ?>
 Il faut dire.. que je ne suis pas vraiment fan des CMS, et toutes ces choses.. quand il s'agit de faire un truc perso complètement bidouillable <em>rapidement</em> (bon.. du coup.. PHP, hein, même si le faire en C pourrait être marrant, je préfère avoir un truc vite-fait).<br/>
 J'ai toujours tout plein d'idées de trucs à commencer, mais j'en termine rarement beaucoup et j'ai pour projet d'ajouter au fil de l'eau ici mes différentes idées mais pas que.");
