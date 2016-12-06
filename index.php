@@ -21,9 +21,6 @@
 	// Je veux ajouter mes pages au fil de l'eau en html, donc on se prend pas le chou là dessus
 	
 	// J'aime pas le dev web.
-?>
-
-<?php
 
 	// classes CSS utilisées
 	
@@ -51,15 +48,21 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
 		<!-- Optional bootstrap theme (file is licensed) -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-		
-
+		<link rel="stylesheet" href="third-party/bootstrap/theme.min.css">
 	</head>
-	<body>
-		<h1>Sylafrs</h1>
-		<?php include("articles/20161206_HelloWorld.php"); ?>
-
+	<body class="container">
+		<div class="row">
+		<!--<div class="col-lg-3">
+				
+			</div> -->
+			<!-- <div class="col-lg-9"> -->
+			<div class="col-lg-12">
+				<div class="page-header">
+					<h1>Sylafrs</h1>
+				</div>
+				<?php include("articles/20161206_HelloWorld.php"); ?>
+			</div>
+		</div>
 		<!-- Bootstrap JavaScript (file is licensed)  -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
