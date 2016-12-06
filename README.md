@@ -1,13 +1,11 @@
-# Site web Sylafrs
+# Sylafrs website
 ## Description
 
-Il s'agit tout bêtement du code source du site-web sylafrs.xyz sans les mots de passe effectifs :p
+That's basically the source code of the sylafrs.xyz website, without passwords :p
 
-Bon, si vous voyez une faille, je vous serais gré de me l'indiquer et de ne pas l'exploiter (sauf si elle est marrante, n'occasionne aucun dégât et que je suis prévenu).
+As stated in the license below, you can do what the fuck you want with it (except saying that I stole this code from you.. since I'm the author and can prove it)
 
-Comme l'indique la license ci-dessous, vous pouvez faire ce que vous voulez de ce que vous pouvez trouver ici (j'utiliserai un lien pour tout ce qui ne m'appartient pas, ou ajouterai sa license en préambule en plus d'une note dans ce readme).
-
-La seule chose que vous ne pouvez pas faire, c'est m'inculper de vol/contrefaçon sur ce contenu.. car j'en resterai son auteur.
+The license can't apply to everything to this repository since I can use 3rd party libraries or content, I will list each exceptions in this readme in the "License Exceptions" section.
 	
 ## License
 		
@@ -27,6 +25,6 @@ as the name is changed.
  0. You just DO WHAT THE FUCK YOU WANT TO.
 ```
  
-## Exceptions à la license
+## License Exceptions
 
- * Aucune
+ * folder: third-party
