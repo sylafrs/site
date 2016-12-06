@@ -32,10 +32,13 @@
 	// image : groupe lié à une image
 ?>
 
+<?php include("functions/misc.php"); ?>
+<?php include("functions/article.php"); ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 	<head>
-		<meta charset="utf8" />
+		<meta charset="utf-8" />
 		<title>Sylafrs</title>
 	</head>
 	<body>
