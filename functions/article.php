@@ -11,10 +11,13 @@ function show_github_displayed_file_name($path_to_file, $displayed_file_name)
 
 function show_all_articles()
 {
-	$files = scandir("./articles");
-	foreach($files as $t) 
-		if ($t<>"." && $t<>".." && $t<>".git")
-				include("./articles/$t");	  
+	$files = scandir("./articles", SCANDIR_SORT_DESCENDING);
+	foreach($files as $t) {
+		if ($t<>"." && $t<>".." && $t<>".git") {
+			include("./articles/$t");	  
+			echo "<hr/>";
+		}
+	}
 }
 
 /**

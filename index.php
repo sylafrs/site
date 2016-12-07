@@ -94,8 +94,7 @@
 				<?php show_all_articles(); ?>
 			</div>
 		</div>
-		<footer>
-			<hr/>
+		<footer>			
 			<pre>Espace utilisé : <?php echo get_directory_size(".") / 1000000; ?> / 100 Mo</pre>
 		</footer>
 		<!-- Bootstrap JavaScript (file is licensed)  -->
