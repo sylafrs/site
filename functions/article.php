@@ -9,6 +9,14 @@ function show_github_displayed_file_name($path_to_file, $displayed_file_name)
 	echo "</div>";
 }
 
+function show_all_articles()
+{
+	$files = scandir("./articles");
+	foreach($files as $t) 
+		if ($t<>"." && $t<>".." && $t<>".git")
+				include("./articles/$t");	  
+}
+
 /**
  * 	Starts an article.
  * 	@param title

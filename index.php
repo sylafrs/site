@@ -29,6 +29,37 @@
 	// image : groupe lié à une image
 ?>
 
+<?php
+
+	/**
+	 * Computes how much space does a directory takes
+	 * @return the computed size
+	 */
+	function get_directory_size($path)
+	{
+		$total_size = 0;
+	    $files = scandir($path);
+	    $cleanPath = rtrim($path, '/'). '/';
+
+	    foreach($files as $t) {
+	        if ($t<>"." && $t<>".." && $t<>".git") {
+	            $currentFile = $cleanPath . $t;
+	            if (is_dir($currentFile)) {
+	                $size = get_directory_size($currentFile);
+	                $total_size += $size;
+	            }
+	            else {
+	                $size = filesize($currentFile);
+	                $total_size += $size;
+	            }
+	        }   
+	    }
+
+	    return $total_size;
+	}
+
+?>
+
 <?php include("functions/misc.php"); ?>
 <?php include("functions/article.php"); ?>
 
@@ -60,9 +91,13 @@
 				<div class="page-header">
 					<h1>Sylafrs</h1>
 				</div>
-				<?php include("articles/20161206_HelloWorld.php"); ?>
+				<?php show_all_articles(); ?>
 			</div>
 		</div>
+		<footer>
+			<hr/>
+			<pre>Espace utilisé : <?php echo get_directory_size(".") / 1000000; ?> / 100 Mo</pre>
+		</footer>
 		<!-- Bootstrap JavaScript (file is licensed)  -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
