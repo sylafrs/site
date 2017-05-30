@@ -91,12 +91,17 @@
 				<div class="page-header">
 					<h1>Sylafrs</h1>
 				</div>
-				<?php show_all_articles(); ?>
+				<?php /*show_all_articles();*/ ?>
+				<div>
+					Site momentanément fermé
+				</div>
 			</div>
 		</div>
+		<!--
 		<footer>			
 			<pre>Espace utilisé : <?php echo get_directory_size(".") / 1000000; ?> / 100 Mo</pre>
 		</footer>
+		-->
 		<!-- Bootstrap JavaScript (file is licensed)  -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
